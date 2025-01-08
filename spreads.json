@@ -1,0 +1,55 @@
+[
+    {
+        "name": "Three-Card Spread",
+        "description": "A simple spread for quick guidance, focusing on past, present, and future.",
+        "deck_used": "Full deck (Major + Minor Arcana)",
+        "positions": [
+            "Past: Events or influences from the past.",
+            "Present: The current state of the situation.",
+            "Future: The likely outcome or advice moving forward."
+        ],
+        "number_of_cards": 3
+    },
+    {
+        "name": "Celtic Cross Spread",
+        "description": "A detailed spread for exploring complex questions or life situations.",
+        "deck_used": "Full deck (Major + Minor Arcana)",
+        "positions": [
+            "The Present: The current state or situation.",
+            "The Challenge: The obstacle or issue to overcome.",
+            "The Past: Past influences affecting the situation.",
+            "The Future: Near future events or influences.",
+            "Above: The querent’s conscious focus or goal.",
+            "Below: Subconscious influences or deeper feelings.",
+            "Advice: Suggestions or guidance.",
+            "External Influences: Environment or other people’s actions.",
+            "Hopes and Fears: The querent’s aspirations or fears.",
+            "Outcome: The likely result if current energies continue."
+        ],
+        "number_of_cards": 10
+    },
+    {
+        "name": "One-Card Draw",
+        "description": "For quick guidance on a single question or daily insight.",
+        "deck_used": "Full deck (Major + Minor Arcana)",
+        "positions": [
+            "The card represents the energy or advice for the day or specific question."
+        ],
+        "number_of_cards": 1
+    },
+    {
+        "name": "Relationship Spread",
+        "description": "A spread designed to explore dynamics in romantic, platonic, or familial relationships.",
+        "deck_used": "Full deck (Major + Minor Arcana)",
+        "positions":[
+            "Querent: How the querent views the relationship.",
+            "Partner: How the other person views the relationship.",
+            "Strengths: Positive aspects of the relationship.",
+            "Weaknesses: Challenges or areas needing work.",
+            "Past: History or events shaping the relationship.",
+            "Present: Current state of the relationship.",
+            "Future: Potential outcome or direction."
+        ],
+        "number_of_cards": 7
+    }
+]

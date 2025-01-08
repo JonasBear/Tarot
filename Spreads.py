@@ -5,6 +5,7 @@ class Spread:
         self.positions = positions  # Dictionary of positions (e.g., {1: "past", 2: "present"})
         self.cards = []  # List to hold drawn cards
 
+    @staticmethod
     def shuffle(deck):
         return random.shuffle(deck)
     
@@ -30,4 +31,5 @@ class Spread:
                 "reverse": is_reversed,
                 "meaning": card.get_meaning(is_reversed)
             }
+        self.cards.clear()
         return interpretation
