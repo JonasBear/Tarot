@@ -2,7 +2,7 @@
     {
         "name": "Three-Card Spread",
         "description": "A simple spread for quick guidance, focusing on past, present, and future.",
-        "deck_used": "Full deck (Major + Minor Arcana)",
+        "deck_used": 1,
         "positions": [
             "Past: Events or influences from the past.",
             "Present: The current state of the situation.",
@@ -13,7 +13,7 @@
     {
         "name": "Celtic Cross Spread",
         "description": "A detailed spread for exploring complex questions or life situations.",
-        "deck_used": "Full deck (Major + Minor Arcana)",
+        "deck_used": 1,
         "positions": [
             "The Present: The current state or situation.",
             "The Challenge: The obstacle or issue to overcome.",
@@ -31,7 +31,7 @@
     {
         "name": "One-Card Draw",
         "description": "For quick guidance on a single question or daily insight.",
-        "deck_used": "Full deck (Major + Minor Arcana)",
+        "deck_used": 1,
         "positions": [
             "The card represents the energy or advice for the day or specific question."
         ],
@@ -40,7 +40,7 @@
     {
         "name": "Relationship Spread",
         "description": "A spread designed to explore dynamics in romantic, platonic, or familial relationships.",
-        "deck_used": "Full deck (Major + Minor Arcana)",
+        "deck_used": 1,
         "positions":[
             "Querent: How the querent views the relationship.",
             "Partner: How the other person views the relationship.",

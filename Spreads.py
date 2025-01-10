@@ -24,7 +24,7 @@ class Spread:
         for idx, card_info in enumerate(self.cards):
             card = card_info["card"]
             is_reversed = card_info["reversed"]
-            position = self.positions[idx + 1]  # Get position meaning from positions map
+            position = self.positions[idx]  # Get position meaning from positions map
             interpretation[position] = {
                 "card": card.name,
                 "suit": card.suit,
