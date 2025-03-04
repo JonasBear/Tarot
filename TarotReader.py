@@ -22,8 +22,8 @@ def generate_spread(major_arcana, minor_arcana, spread_data):
     print_interpretation(interpretation)
 
 def print_interpretation(interpretation):
-    for position, card_info in interpretation.items():
-        print(position)
+    for index, (position, card_info) in enumerate(interpretation.items(), start=1):
+        print((f"{index}. " if len(interpretation)>1 else "") + position)
         print(f"Card Name: {card_info['card']}"+ (", Reversed" if card_info['reverse'] else ""))
         if (card_info['suit'] != None):
             print(f"Suit: {card_info['suit']}")
@@ -49,7 +49,7 @@ spread_data = load_data_from_json("spreads.json")
 print("Hello and welcome to Casper's Veil.")
 input()
 
-print("Please choose a spread for a peak into your matter: ")
+print("Please choose a spread for a peek into your matter: ")
 time.sleep(2)
 for index, spreads in enumerate(spread_data, start = 1):
     print(f"{index}. Name: {spreads['name']}")
