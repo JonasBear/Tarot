@@ -3,67 +3,67 @@
         "name": "One-Card Draw",
         "description": "For quick guidance on a single question or daily insight.",
         "deck_used": 1,
-        "positions": [
-            "The card represents the energy or advice for the day or specific question."
-        ],
+        "positions": {
+            "1": "The card represents the energy or advice for the day or specific question."
+        },
         "number_of_cards": 1
     },
     {
         "name": "Three-Card Spread",
         "description": "A simple spread for quick guidance, focusing on past, present, and future.",
         "deck_used": 1,
-        "positions": [
-            "Past: Events or influences from the past.",
-            "Present: The current state of the situation.",
-            "Future: The likely outcome or advice moving forward."
-        ],
+        "positions": {
+            "1": "Past: Events or influences from the past.",
+            "2": "Present: The current state of the situation.",
+            "3": "Future: The likely outcome or advice moving forward."
+        },
         "number_of_cards": 3
     },
     {
         "name": "Relationship Spread",
         "description": "A spread designed to explore dynamics in romantic, platonic, or familial relationships.",
         "deck_used": 1,
-        "positions":[
-            "Querent: How the querent views the relationship.",
-            "Partner: How the other person views the relationship.",
-            "Strengths: Positive aspects of the relationship.",
-            "Weaknesses: Challenges or areas needing work.",
-            "Past: History or events shaping the relationship.",
-            "Present: Current state of the relationship.",
-            "Future: Potential outcome or direction."
-        ],
+        "positions":{
+            "1": "Querent: How the querent views the relationship.",
+            "2": "Partner: How the other person views the relationship.",
+            "3": "Strengths: Positive aspects of the relationship.",
+            "4": "Weaknesses: Challenges or areas needing work.",
+            "5": "Past: History or events shaping the relationship.",
+            "6": "Present: Current state of the relationship.",
+            "7": "Future: Potential outcome or direction."
+        },
         "number_of_cards": 7
     },
     {
         "name": "Celtic Cross Spread",
         "description": "A detailed spread for exploring complex questions or life situations.",
         "deck_used": 1,
-        "positions": [
-            "The Present: The current state or situation.",
-            "The Challenge: The obstacle or issue to overcome.",
-            "The Past: Past influences affecting the situation.",
-            "The Future: Near future events or influences.",
-            "Above: The querent’s conscious focus or goal.",
-            "Below: Subconscious influences or deeper feelings.",
-            "Advice: Suggestions or guidance.",
-            "External Influences: Environment or other people’s actions.",
-            "Hopes and Fears: The querent’s aspirations or fears.",
-            "Outcome: The likely result if current energies continue."
-        ],
+        "positions": {
+            "1": "The Present: The current state or situation.",
+            "2": "The Challenge: The obstacle or issue to overcome.",
+            "3": "The Past: Past influences affecting the situation.",
+            "4": "The Future: Near future events or influences.",
+            "5": "Above: The querent’s conscious focus or goal.",
+            "6": "Below: Subconscious influences or deeper feelings.",
+            "7": "Advice: Suggestions or guidance.",
+            "8": "External Influences: Environment or other people’s actions.",
+            "9": "Hopes and Fears: The querent’s aspirations or fears.",
+            "10": "Outcome: The likely result if current energies continue."
+        },
         "number_of_cards": 10
     },
     {
         "name": "Past Life Spread",
         "description": "Exploring past life influences on the current life.",
         "deck_used": 0,
-        "positions": [
-            "Past Life Theme: The core theme of the past life.",
-            "Past Challenges: Difficulties or obstacles faced in the past life.",
-            "Past Life Relationships: Key relationships influencing the current life.",
-            "Karmic Debt: Lessons brought forward into this life.",
-            "Current Challenges: How the past life influences today’s struggles.",
-            "Resolution: How to resolve past-life influences."
-        ],
+        "positions": {
+            "1": "Past Life Theme: The core theme of the past life.",
+            "2": "Past Challenges: Difficulties or obstacles faced in the past life.",
+            "3": "Past Life Relationships: Key relationships influencing the current life.",
+            "4": "Karmic Debt: Lessons brought forward into this life.",
+            "5": "Current Challenges: How the past life influences today’s struggles.",
+            "6": "Resolution: How to resolve past-life influences."
+        },
         "number_of_cards": 6
     }
 ]
