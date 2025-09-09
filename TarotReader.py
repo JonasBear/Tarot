@@ -10,11 +10,35 @@ def generate_spread(major_arcana, minor_arcana, spread_data):
         deck = major_arcana
         
     Spread.shuffle(deck)
-    spread = Spread(spread_data['name'],spread_data['positions'])
+    spread = Spread(spread_data['id'], spread_data['name'],spread_data['positions'])
     for _ in range(spread_data['number_of_cards']):
         spread.draw_card(deck)
     interpretation = spread.interpret()
+    save_reading(spread, interpretation)
     print_interpretation(interpretation)
+
+def save_reading(spread, interpretation):
+    conn = sqlite3.connect("veilArchive.db")
+    c = conn.cursor()
+
+    # Insert the reading
+    c.execute("INSERT INTO readings (spread_id) VALUES (?)", (spread.spread_id,))
+    reading_id = c.lastrowid
+
+    # Insert each drawn card
+    for pos_index, (position, card_info) in enumerate(interpretation.items(), start=1):
+        # First get the card_id from DB by name (or better: store it in Card object when loading)
+        c.execute("SELECT id FROM cards WHERE name=?", (card_info["card"],))
+        card_id = c.fetchone()[0]
+
+        c.execute(
+            "INSERT INTO reading_cards (reading_id, card_id, position_index, is_reversed) VALUES (?, ?, ?, ?)",
+            (reading_id, card_id, pos_index, card_info["reverse"])
+        )
+
+    conn.commit()
+    conn.close()
+
 
 def print_interpretation(interpretation):
     for index, (position, card_info) in enumerate(interpretation.items(), start=1):

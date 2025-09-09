@@ -1,7 +1,8 @@
 import sqlite3
 
 class Card:
-    def __init__(self, name, suit=None, upright_meaning="", reversed_meaning=""):
+    def __init__(self, id=None, name="", suit=None, upright_meaning="", reversed_meaning=""):
+        self.id = id
         self.name = name
         self.suit = suit
         self.upright_meaning = upright_meaning
@@ -13,17 +14,17 @@ class Card:
         c = conn.cursor()
 
         # Major arcana
-        c.execute("SELECT name, suit, upright_meaning, reversed_meaning FROM cards WHERE arcana_type='major'")
+        c.execute("SELECT id, name, upright_meaning, reversed_meaning FROM cards WHERE arcana_type='major'")
         major = [
-            Card(name, upright, reversed_,)
-            for name, upright, reversed_ in c.fetchall()
+            Card(id, name, upright, reversed_,)
+            for id, name, upright, reversed_ in c.fetchall()
         ]
 
         # Minor arcana
-        c.execute("SELECT name, suit, upright_meaning, reversed_meaning FROM cards WHERE arcana_type='minor'")
+        c.execute("SELECT id, name, suit, upright_meaning, reversed_meaning FROM cards WHERE arcana_type='minor'")
         minor = [
-            Card(name, suit, upright, reversed_,)
-            for name, suit, upright, reversed_ in c.fetchall()
+            Card(id, name, suit, upright, reversed_,)
+            for id, name, suit, upright, reversed_ in c.fetchall()
         ]
 
         conn.close()

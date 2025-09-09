@@ -2,7 +2,8 @@ import random
 import sqlite3
 
 class Spread:
-    def __init__(self, spread_name, positions):
+    def __init__(self, spread_id, spread_name, positions):
+        self.spread_id = spread_id
         self.spread_name = spread_name
         self.positions = positions  
         self.cards = []  # List to hold drawn cards
