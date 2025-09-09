@@ -1,7 +1,7 @@
 import sqlite3, json
 from Cards import Card
 
-conn = sqlite3.connect("tarot.db")
+conn = sqlite3.connect("veilarchive.db")
 c = conn.cursor()
 
 # Load JSON
@@ -11,15 +11,13 @@ with open("cards_data.json", "r") as f:
 major_arcana = Card.create_major_arcana(card_data)
 minor_arcana = Card.create_minor_arcana(card_data)
 
+c.execute("DELETE FROM cards")
 # Insert cards
 for card in major_arcana + minor_arcana:
     c.execute(
         "INSERT INTO cards (name, suit, upright_meaning, reversed_meaning) VALUES (?, ?, ?, ?)",
         (card.name, card.suit, card.upright_meaning, card.reversed_meaning)
     )
-
-with open("spreads.json", "r") as f:
-    spread_data = json.load(f)
 
 with open("spreads.json", "r") as f:
     spreads_data = json.load(f)
