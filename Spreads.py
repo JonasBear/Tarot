@@ -42,6 +42,7 @@ class Spread:
             is_reversed = card_info["reversed"]
             position = self.positions[idx+1]
             interpretation[position] = {
+                "id": card.id,
                 "card": card.name,
                 "suit": card.suit,
                 "reverse": is_reversed,

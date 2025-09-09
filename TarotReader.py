@@ -27,9 +27,7 @@ def save_reading(spread, interpretation):
 
     # Insert each drawn card
     for pos_index, (position, card_info) in enumerate(interpretation.items(), start=1):
-        # First get the card_id from DB by name (or better: store it in Card object when loading)
-        c.execute("SELECT id FROM cards WHERE name=?", (card_info["card"],))
-        card_id = c.fetchone()[0]
+        card_id = card_info['id']
 
         c.execute(
             "INSERT INTO reading_cards (reading_id, card_id, position_index, is_reversed) VALUES (?, ?, ?, ?)",
