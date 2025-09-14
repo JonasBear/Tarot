@@ -10,7 +10,7 @@ class Card:
     
     @staticmethod
     def load_cards_from_db():
-        conn = sqlite3.connect("veilarchive.db")
+        conn = sqlite3.connect("./veilArchive.db")
         c = conn.cursor()
 
         # Major arcana

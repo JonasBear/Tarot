@@ -10,7 +10,7 @@ class Spread:
     
     @staticmethod
     def load_spreads_from_db():
-        conn = sqlite3.connect("veilArchive.db")
+        conn = sqlite3.connect("./veilArchive.db")
         c = conn.cursor()
         c.execute("SELECT id, name, description, number_of_cards, deck_used FROM spreads")
         spreads = []
